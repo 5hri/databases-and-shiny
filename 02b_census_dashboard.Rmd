@@ -23,8 +23,8 @@ library(DBI)
 con <- dbConnect(odbc::odbc(), "Postgres (finance)")
 pred_raw <- dbReadTable(con, "census")
 
-m1 <- readRDS("census_data/logisticModel.rds")
-m2 <- readRDS("census_data/elasticnetModel.rds")
+m1 <- readRDS("data/logisticModel.rds")
+m2 <- readRDS("data/elasticnetModel.rds")
 n <- nrow(pred_raw)
 
 ```

@@ -6,8 +6,8 @@ output: html_notebook
 ## Logistic
 
 ```{bash, message=FALSE}
-inputfile="../data/bank-top.csv"
-outputfile="../data/logistic_output.csv"
+inputfile="data/bank-top.csv"
+outputfile="data/logistic_output.csv"
 cat /dev/null > $outputfile
 while IFS= read -r inputline
 do
@@ -19,8 +19,8 @@ done < "$inputfile"
 ## Random Forest
 
 ```{bash, include=FALSE}
-inputfile="../data/bank-top.csv"
-outputfile="../data/ranger_output.csv"
+inputfile="data/bank-top.csv"
+outputfile="data/randomforest_output.csv"
 cat /dev/null > $outputfile
 while IFS= read -r inputline
 do

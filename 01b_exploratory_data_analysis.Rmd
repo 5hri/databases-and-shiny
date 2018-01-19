@@ -77,32 +77,6 @@ ggplot(p2, aes(term_deposit, value, color = year)) +
 
 ```
 
-Lower rates of `euribor3m` were associated with associated with more term desposits. 
-
-```{r}
-collect(bank) %>%
-ggplot(aes(euribor3m, color = term_deposit)) +
-  geom_density(adjust=0.05)
-```
-
-Clients with a successful prior outcome were much more likley to subscribe to a term deposit.
-
-```{r}
-bank %>%
-  group_by(term_deposit) %>%
-  count(prior_outcome) %>%
-  mutate(pct = round(100 * n / sum(n), 1)) %>%
-  select(-n) %>%
-  collect %>%
-  spread(term_deposit, pct)
-```
-
-Contacts who subscribe to term deposits skew slightly older and younger.
-
-```{r}
-collect(bank) %>%
-qplot(term_deposit, age, data = ., geom = "boxplot")
-```
 
 October saw an unusually high percent of term deposits in 2008.
 
