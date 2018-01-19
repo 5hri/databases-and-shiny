@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+other
+databases-and-shiny.Rproj
+*.html
+*.RDS
+*.csv
+data
